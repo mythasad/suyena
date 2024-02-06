@@ -10,11 +10,32 @@ import FirebaseConfiguration from "../pageSetup/FirebaseConfiguration.astro";
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="manifest" href="manifest.json">
+        <link rel="manifest" href="manifest.json" />
         <title>{title}</title>
     </head>
     <body>
         <slot />
-        <FirebaseConfiguration/>
+        <FirebaseConfiguration />
+
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker.register("/service-worker.js").then(
+                        function (registration) {
+                            console.log(
+                                "ServiceWorker registration successful with scope: ",
+                                registration.scope,
+                            );
+                        },
+                        function (err) {
+                            console.log(
+                                "ServiceWorker registration failed: ",
+                                err,
+                            );
+                        },
+                    );
+                });
+            }
+        </script>
     </body>
 </html>

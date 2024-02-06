@@ -1,21 +1,23 @@
 {
-    "name": "Suyena | Preserved the Dream",
-    "short_name": "Suyena",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#290D9C",
-    "description": "Learn! Grow!! Achieve!!!",
-    "icons": [
-      {
-        "src": "/images/icons-192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/images/icons-512.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ]
-  }
-  
+  "name": "Suyena | Preserved the Dream",
+  "short_name": "Suyena",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#290D9C",
+  "description": "Learn! Grow!! Achieve!!!",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "scope": "/",
+  "theme_color": "#ffffff",
+  "lang": "en-US"
+}
