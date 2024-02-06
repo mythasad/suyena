@@ -1,5 +1,6 @@
 ---
 const { title, description } = Astro.props;
+import FirebaseConfiguration from "../pageSetup/FirebaseConfiguration.astro";
 ---
 
 <!doctype html>
@@ -13,29 +14,6 @@ const { title, description } = Astro.props;
     </head>
     <body>
         <slot />
-
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-              apiKey: "AIzaSyDHz-dRYjdngVm2-iL-4L18346WziA44_g",
-              authDomain: "suyena-info.firebaseapp.com",
-              projectId: "suyena-info",
-              storageBucket: "suyena-info.appspot.com",
-              messagingSenderId: "555587043456",
-              appId: "1:555587043456:web:ccc3ff307f46c3b84f6665",
-              measurementId: "G-1E0JD64VN7"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-          </script>
+        <FirebaseConfiguration/>
     </body>
 </html>
