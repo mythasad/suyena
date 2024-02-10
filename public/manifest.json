@@ -3,7 +3,7 @@
   "short_name": "Suyena",
   "start_url": "/",
   "display": "fullscreen",
-  "background_color": "#89cff0",
+  "background_color": "#1f1f1f",
   "description": "Learn! Grow!! Achieve!!!",
   "icons": [
     {
@@ -18,6 +18,6 @@
     }
   ],
   "scope": "/",
-  "theme_color": "#89cff0",
+  "theme_color": "#1f1f1f",
   "lang": "en-US"
 }
