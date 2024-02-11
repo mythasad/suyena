@@ -11,6 +11,7 @@ import siteLogo from "../../../assets/logo.svg";
     }
     #site-info {
         display: flex;
+        text-decoration: none;
         text-align: center;
     }
     #site-details {
@@ -85,13 +86,11 @@ import siteLogo from "../../../assets/logo.svg";
     }
 </style>
 <header>
-    <div id="site-info">
-        <Image src={siteLogo} alt={"Suyena Logo"} width={75} />
+    <a href="/" id="site-info"><Image src={siteLogo} alt={"Suyena Logo"} width={75} />
         <div id="site-details">
             <span id="site-name"> Suyena</span>
             <span id="site-motto"> Learn, grow, achieve.</span>
-        </div>
-    </div>
+        </div></a>
     <div id="search"></div>
     <div id="site-menu">
         <div id="menu-items">
