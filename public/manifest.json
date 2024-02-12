@@ -3,21 +3,20 @@
   "short_name": "Suyena",
   "start_url": "/",
   "display": "fullscreen",
-  "background_color": "#89cff0",
+  "background_color": "#1f1f1f",
   "description": "Learn! Grow!! Achieve!!!",
   "icons": [
     {
-      "src": "/images/icons-192.png",
-      "type": "image/png",
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
       "sizes": "192x192"
     },
-    {
-      "src": "/images/icons-512.png",
-      "type": "image/png",
+    {"src": "/logo.svg",
+      "type": "image/svg+xml",
       "sizes": "512x512"
     }
   ],
   "scope": "/",
-  "theme_color": "#ffffff",
+  "theme_color": "#1f1f1f",
   "lang": "en-US"
 }

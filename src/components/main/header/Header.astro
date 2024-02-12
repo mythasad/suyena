@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import siteLogo from "../../assets/logo.svg";
+import siteLogo from "../../../assets/logo.svg";
 ---
 
 <style>
@@ -11,27 +11,29 @@ import siteLogo from "../../assets/logo.svg";
     }
     #site-info {
         display: flex;
+        text-decoration: none;
         text-align: center;
     }
     #site-details {
         display: flex;
         flex-direction: column;
     }
-    #site-name{
+    #site-name {
         font: 2.8em monospace;
     }
     #site-menu {
         display: flex;
     }
-    
-    .material-symbols-outlined{
+
+    .material-symbols-outlined {
+        max-width: 27px;
         font-size: 1.7rem;
         background-color: #62ee2a;
         color: #4726dd;
         border-radius: 50%;
         padding: 5px;
     }
-    .material-symbols-outlined:hover{
+    .material-symbols-outlined:hover {
         cursor: pointer;
         background-color: #4726dd;
         color: #62ee2a;
@@ -43,57 +45,77 @@ import siteLogo from "../../assets/logo.svg";
         text-decoration: none;
     }
 
-    #select-menu{
+    #select-menu {
         touch-action: manipulation;
     }
-    #buttonControl{
+    #buttonControl {
         display: none;
     }
-    #buttonControl:checked + #select-menu + #header-menu{
+    #buttonControl:checked + #select-menu + #header-menu {
         display: block;
     }
-    #header-menu{
+    #header-menu {
         display: none;
         position: absolute;
+        right: 5px;
     }
 
-    li>a{
+    li > a {
         font-size: 1.39rem;
         display: block;
         border-radius: 0px;
-        transition: border-radius 0.5s ease, background-color 0.79s ease, color 1s ease;     
+        transition:
+            border-radius 0.5s ease,
+            background-color 0.79s ease,
+            color 1s ease;
         background-color: #92e770;
         text-align: center;
         padding: 0.53rem;
     }
 
-    li>a:hover{
+    li > a:hover {
         border-radius: 11px;
         background-color: #4726dd;
         color: #fff;
+    }
 
+    #nightMode,
+    #dayMode,
+    #profile {
+        display: none;
     }
 </style>
 <header>
-    <div id="site-info">
-        <Image src={siteLogo} alt={"Suyena Logo"} width={75} />
+    <a href="/" id="site-info"><Image src={siteLogo} alt={"Suyena Logo"} width={75} />
         <div id="site-details">
             <span id="site-name"> Suyena</span>
             <span id="site-motto"> Learn, grow, achieve.</span>
-        </div>
-    </div>
+        </div></a>
     <div id="search"></div>
     <div id="site-menu">
         <div id="menu-items">
             <span id="switch-theme">
-                <span class="material-symbols-outlined"> light_mode </span>
-                <span class="material-symbols-outlined"> dark_mode </span>
+                <span
+                    id="dayMode"
+                    onclick="changeThemeColor()"
+                    class="material-symbols-outlined"
+                >
+                    light_mode
+                </span>
+                <span
+                    id="nightMode"
+                    onclick="changeThemeColor()"
+                    class="material-symbols-outlined"
+                >
+                    dark_mode
+                </span>
             </span>
-            <span id="switch-language" class="material-symbols-outlined">
-                language
-            </span>
-            <input type="checkbox" name="" id="buttonControl">
-            <label id="select-menu" for="buttonControl" class="material-symbols-outlined">
+            <input type="checkbox" name="" id="buttonControl" />
+            <label
+                id="select-menu"
+                for="buttonControl"
+                class="material-symbols-outlined"
+            >
                 menu
             </label>
             <nav id="header-menu">
@@ -106,6 +128,10 @@ import siteLogo from "../../assets/logo.svg";
                     <li><a href="/glossary">Glossary</a></li>
                 </ul>
             </nav>
+
+            <span id="switch-language" class="material-symbols-outlined">
+                language
+            </span>
             <span id="profile" class="material-symbols-outlined"> person</span>
         </div>
     </div>
