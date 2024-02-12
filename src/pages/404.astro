@@ -1,18 +1,21 @@
 ---
-
+import Layout from "../components/layouts/MainPageLayout.astro";
+const title = "404 Error";
+const description =
+    "The page you are looking for is not found. Please considered yourself for the currect url or contact us for any other means.";
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>404 Error</title>
-    </head>
-    <body>
-        <main>
-            <h1>Sorry!</h1>
-        <h2>The page you are looing for, is not found.</h2>
-        </main>
-    </body>
-</html>
+<style>
+    article {
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<Layout title={title} , description={description}>
+    <main>
+        <h1>Sorry!</h1>
+    <h2>The page you are looing for, is not found.</h2>
+    </main>
+</Layout>
