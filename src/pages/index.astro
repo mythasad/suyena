@@ -1,20 +1,10 @@
 ---
-import Layout from "../components/layouts/MainPageLayout.astro";
+import MainPageLayout from "../components/layouts/MainPageLayout.astro";
 const title = "Suyena | Perfectly Aligned";
 const description =
     "A dream for your future. Learn, grow, achieve. Suyena Preserved the Dream.";
 ---
 
-<style>
-    article {
-        height: 75vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
-<Layout title={title} , description={description}>
-    <article>
+<MainPageLayout title={title} , description={description}>
         <h1>This website is under development!</h1>
-    </article>
-</Layout>
+</MainPageLayout>
