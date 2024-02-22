@@ -3,20 +3,18 @@
 ---
 
 <style>
-    nav {
-    }
     li {
         list-style: none;
     }
-    li a {
+    a {
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         transition:
-                    border-radius 1.5s ease,
+            border-radius 1.5s ease,
             background-color 0.79s ease,
             color 1s ease;
-        font-size: x-large;
-        display: block;
-        padding: 10px 5px;
+        font-size: large;
+        display: inline-block;
+        padding: 5px 5px;
         text-decoration: none;
     }
     a:hover {
@@ -27,18 +25,55 @@
     ul {
         padding-inline-start: 15px;
     }
+    summary {
+        background-color: #b999f9;
+        margin: 1px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    summary>span{
+        padding-right: 10%;
+    }
 </style>
 
 <ul>
-    <li><a href="/programs">Programs</a></li>
-    <ul>
-        <li><a href="/programs/medicine">Medicine</a></li>
-        <li><a href="/programs/science">Science</a></li>
-        <li><a href="/programs/education">Education</a></li>
-        <li><a href="/programs/engineering">Engineering</a></li>
-        <li><a href="/programs/technology">Technology</a></li>
-        <li><a href="/programs/humanities">Humanities</a></li>
-    </ul>
-    <li><a href="/courses">Courses</a></li>
-    <li><a href="/resources">Resources</a></li>
+    <details>
+        <summary>
+            <a href="/programs">Programs</a>
+            <span> &#9884</span>
+        </summary>
+        <ul>
+            <li><a href="/programs/medicine">Medicine</a></li>
+            <li><a href="/programs/science">Science</a></li>
+            <li><a href="/programs/education">Education</a></li>
+            <li><a href="/programs/engineering">Engineering</a></li>
+            <li><a href="/programs/technology">Technology</a></li>
+            <li><a href="/programs/humanities">Humanities</a></li>
+        </ul>
+    </details>
+    <details>
+        <summary><a href="/courses">Courses</a><span> &#9884</span></summary>
+        <ul>
+            <li><a href="/programs/medicine">Medicine</a></li>
+            <li><a href="/programs/science">Science</a></li>
+            <li><a href="/programs/education">Education</a></li>
+            <li><a href="/programs/engineering">Engineering</a></li>
+            <li><a href="/programs/technology">Technology</a></li>
+            <li><a href="/programs/humanities">Humanities</a></li>
+        </ul>
+    </details>
+    <details>
+        <summary><a href="/resources">Resources</a><span> &#9884</span></summary
+        >
+        <ul>
+            <li><a href="/programs/medicine">Medicine</a></li>
+            <li><a href="/programs/science">Science</a></li>
+            <li><a href="/programs/education">Education</a></li>
+            <li><a href="/programs/engineering">Engineering</a></li>
+            <li><a href="/programs/technology">Technology</a></li>
+            <li><a href="/programs/humanities">Humanities</a></li>
+        </ul>
+    </details>
 </ul>
