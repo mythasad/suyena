@@ -1,0 +1,23 @@
+---
+import FooterBn from "../../components/footer/FooterBn.astro";
+import HeaderBn from "../../components/header/HeaderBn.astro";
+import BaseLayout from "../BaseLayout.astro";
+const { title, description } = Astro.props;
+const lang = "bn";
+---
+<BaseLayout lang={lang} , title={title} , description={description}>
+    <HeaderBn/>
+    <main>
+        <slot />
+    </main>
+    <FooterBn/>
+</BaseLayout>
+
+
+<style>
+    main{
+        p{
+            text-align: justify;
+        }
+    }
+</style>

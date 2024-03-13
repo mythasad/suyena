@@ -1,0 +1,30 @@
+
+footer{
+    margin: 2rem 0rem;
+    
+}
+nav{
+    ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        list-style-type: none;
+    }
+    li{
+        a{
+            text-decoration: none;
+
+            &:hover{
+                background-color: #8667f385;
+                color: #000;
+            }
+        }
+    }
+}
+p{
+    text-align: center;
+    margin: 0;padding: 0;
+}

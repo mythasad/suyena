@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import siteLogo from "../../assets/logo.svg";
+import "./header.scss";
+import SwitchLanguage from "./switchLang/SwitchLanguage.astro";
+---
+
+<header>
+    <a href="/bn/">
+        <Image src={siteLogo} width={56} alt="Suyena Logo" />
+        <div>
+            <span id="site-name">সুয়েনা</span>
+            <span>শিখুন, বাড়ুন, অর্জন করুন</span>
+        </div>
+    </a>
+    <div>
+        <SwitchLanguage />
+        <nav>
+            <span id="menu-toggle"> &#9776 </span>
+            <ul id="headerNav">
+                <li>
+                    <a href="/bn/programs">প্রোগ্রামসমূহ</a>
+                </li>
+                <li>
+                    <a href="/bn/courses">কোর্সসমূহ</a>
+                </li>
+                <li>
+                    <a href="/bn/resources">সম্পদসমূহ</a>
+                </li>
+                <li>
+                    <a href="/bn/blogs">ব্লগসমূহ</a>
+                </li>
+                <li>
+                    <a href="/bn/news-events">খবর এবং ঘটনাবলী</a>
+                </li>
+                <li>
+                    <a href="/bn/glossary">শব্দকোষ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    import "./header";
+</script>

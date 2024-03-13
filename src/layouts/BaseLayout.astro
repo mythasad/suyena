@@ -9,12 +9,10 @@ const { lang, title, description } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
         <meta name="google-adsense-account" content="ca-pub-4903148356302804" />
-        <link
-            rel="shortcut icon"
-            href="../assets/logo.svg"
-            type="image/svg+xml"
-        />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="sitemap" href="/sitemap-index.xml" />
+
+        <link rel="shortcut icon" href="/favicon.svg" type="image/xml" />
         <title>{title}</title>
     </head>
     <body>
@@ -35,5 +33,42 @@ const { lang, title, description } = Astro.props;
             const app = initializeApp(firebaseConfig);
             export const analytics = getAnalytics(app);
         </script>
+
+<!--         
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker.register("/service-worker.js").then(
+                        function (registration) {
+                            console.log(
+                                "ServiceWorker registration successful with scope: ",
+                                registration.scope,
+                            );
+                        },
+                        function (err) {
+                            console.log(
+                                "ServiceWorker registration failed: ",
+                                err,
+                            );
+                        },
+                    );
+                });
+            }
+        </script> -->
     </body>
 </html>
+
+<style>
+    body {
+        p{
+            line-height: 1.5rem;
+        }
+        background:
+            linear-gradient(
+                to right,
+                rgba(180, 216, 179, 0.95),
+                rgba(200, 213, 255, 0.95)
+            ),
+            url(../assets/logo.png) repeat;
+    }
+</style>

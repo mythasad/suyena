@@ -5,10 +5,12 @@ const cacheName = 'v1';
 let cacheFiles = [
   './',
   './index.html',
+  './bn/index.html',
+  './en/index.html',
+  './en/about-us.html',
+  './bn/about-us.html',
   './manifest.json',
-  './favicon.svg',
-  './images/icons-192.png',
-  './images/icons-512.png'
+  './favicon.svg'
 ]
 
 self.addEventListener('install', function(e) {

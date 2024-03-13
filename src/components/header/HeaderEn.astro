@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import SwitchLanguage from "./switchLang/SwitchLanguage.astro";
+import siteLogo from "../../assets/logo.svg";
+import './header.scss';
+---
+
+<header>
+    <a href="/en/">
+        <Image src={siteLogo} width={56} alt="Suyena Logo" />
+        <div>
+            <span> Suyena</span>
+            <span> Learn, grow, achieve. </span>
+        </div>
+    </a>
+<div>
+    <SwitchLanguage/>
+    <nav>
+        <span id="menu-toggle">
+            &#9776
+        </span>
+        <ul id="headerNav">
+            <li>
+                <a href="/en/programs">Programs</a>
+            </li>
+            <li>
+                <a href="/en/courses">Courses</a>
+            </li>
+            <li>
+                <a href="/en/resources">Resources</a>
+            </li>
+            <li>
+                <a href="/en/blogs">Blogs</a>
+
+            </li>
+            <li>
+                <a href="/en/news-events">News & Events</a>
+            </li>
+            <li>
+                <a href="/en/glossary">Glossary</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</header>
+
+
+<script>
+    import "./header";
+</script>

@@ -1,0 +1,22 @@
+---
+import FooterEn from "../../components/footer/FooterEn.astro";
+import HeaderEn from "../../components/header/HeaderEn.astro";
+import BaseLayout from "../BaseLayout.astro";
+const { title, description } = Astro.props;
+const lang = "en";
+---
+
+<BaseLayout lang={lang} , title={title} , description={description}>
+    <HeaderEn/>
+    <main>
+        <slot />
+    </main>
+    <FooterEn/>
+</BaseLayout>
+<style>
+    main{
+        p{
+            text-align: justify;
+        }
+    }
+</style>
