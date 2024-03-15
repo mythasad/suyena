@@ -5,18 +5,7 @@ const { lang, title, description } = Astro.props;
 <!doctype html>
 <html lang={lang}>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={description} />
-        <meta name="google-adsense-account" content="ca-pub-4903148356302804" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="sitemap" href="/sitemap-index.xml" />
-
-        <link rel="shortcut icon" href="/favicon.svg" type="image/xml" />
-        <title>{title}</title>
-    </head>
-    <body>
-        <slot />
+        
         <!-- FIREBASE CONFIGURATION -->
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
@@ -34,6 +23,18 @@ const { lang, title, description } = Astro.props;
             export const analytics = getAnalytics(app);
         </script>
 
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={description} />
+        <meta name="google-adsense-account" content="ca-pub-4903148356302804" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+
+        <link rel="shortcut icon" href="/favicon.svg" type="image/xml" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
 <!--         
         <script>
             if ("serviceWorker" in navigator) {
