@@ -6,6 +6,7 @@ header {
     align-items: flex-start;
     border-bottom: 2px solid green;
     padding-bottom: 0.5rem;
+    width: 100%;
 
     a {
         display: flex;
@@ -13,10 +14,12 @@ header {
         gap: 0.5rem;
 
         img {
+            width: 4em;
+            height: 4em;
             box-shadow: inset 0px 0px 20px rgba(89, 0, 255, 0.432);
             border-radius: 50%;
             background-color: #43d3c767;
-            padding: 5px;
+            padding: 0.5em;
         }
 
         div {

@@ -2,18 +2,24 @@
   "name": "Suyena | Preserved the Dream",
   "short_name": "Suyena",
   "start_url": "/",
-  "display": "fullscreen",
+  "display": "standalone",
   "background_color": "#1f1f1f",
-  "description": "Learn! Grow!! Achieve!!!",
+  "description": "A dream for your future. Learn! Grow!! Achieve!!! Suyena Preserved the Dream.",
   "icons": [
     {
       "src": "/favicon.svg",
       "type": "image/svg+xml",
       "sizes": "192x192"
     },
-    {"src": "/favicon.svg",
-      "type": "image/svg+xml",
+    {"src": "/logo.png",
+      "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "196x196",
+      "purpose" :  "maskable"
     }
   ],
   "scope": "/",

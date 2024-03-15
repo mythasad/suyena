@@ -12,13 +12,15 @@ const { lang, title, description } = Astro.props;
         <meta name="google-adsense-account" content="ca-pub-4903148356302804" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="sitemap" href="/sitemap-index.xml" />
-
+        <meta name="theme-color" content="#1f1f1f">
         <link rel="shortcut icon" href="/favicon.svg" type="image/xml" />
         <title>{title}</title>
     </head>
+
+
     <body>
         <slot />
-<!--         
+                
         <script>
             if ("serviceWorker" in navigator) {
                 window.addEventListener("load", function () {
@@ -38,16 +40,16 @@ const { lang, title, description } = Astro.props;
                     );
                 });
             }
-        </script> -->
-        <FirebaseConfiguration/>
+        </script>
+        <FirebaseConfiguration />
     </body>
 </html>
 
-<style>
+<style is:global>
     body {
-        p{
-            line-height: 1.5rem;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background:
             linear-gradient(
                 to right,
@@ -55,5 +57,19 @@ const { lang, title, description } = Astro.props;
                 rgba(200, 213, 255, 0.95)
             ),
             url(../assets/logo.png) repeat;
+
+        main {
+            max-width: 53rem;
+            p{
+                text-align: justify;
+            }
+
+        }
+
+        footer {
+            margin: 2rem 0rem;
+            position: absolute;
+            bottom: 0px;
+        }
     }
 </style>
