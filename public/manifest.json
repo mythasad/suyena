@@ -4,7 +4,7 @@
   "start_url": "/",
   "display": "fullscreen",
   "background_color": "#1f1f1f",
-  "description": "Learn! Grow!! Achieve!!!",
+  "description": "A dream for your future. Learn! Grow!! Achieve!!! Suyena Preserved the Dream.",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -14,6 +14,12 @@
     {"src": "/favicon.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
+    },    
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "196x196",
+      "purpose" :  "maskable"
     }
   ],
   "scope": "/",
