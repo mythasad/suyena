@@ -10,7 +10,7 @@ const { lang, title, description } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
         <meta name="google-adsense-account" content="ca-pub-4903148356302804" />
-        <link rel="manifest" href="/manifest.json" />
+        <!-- <link rel="manifest" href="/manifest.json" /> -->
         <link rel="sitemap" href="/sitemap-index.xml" />
         <meta name="theme-color" content="#1f1f1f">
         <link rel="shortcut icon" href="/favicon.svg" type="image/xml" />
@@ -21,7 +21,7 @@ const { lang, title, description } = Astro.props;
     <body>
         <slot />
                 
-        <script>
+        <!-- <script>
             if ("serviceWorker" in navigator) {
                 window.addEventListener("load", function () {
                     navigator.serviceWorker.register("/service-worker.js").then(
@@ -40,7 +40,7 @@ const { lang, title, description } = Astro.props;
                     );
                 });
             }
-        </script>
+        </script> -->
         <FirebaseConfiguration />
     </body>
 </html>
@@ -68,7 +68,7 @@ const { lang, title, description } = Astro.props;
 
         footer {
             margin: 2rem 0rem;
-            position: absolute;
+            position: relative;
             bottom: 0px;
         }
     }
