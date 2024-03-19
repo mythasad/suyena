@@ -1,0 +1,58 @@
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-us-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        gap: 0.5rem;
+        background-color: #b8a4ee65;
+        box-shadow: 0px 0px 20px 5px rgba(17, 0, 255, 0.397);
+        border-radius: 1em;
+        padding-bottom: 1rem;
+        label{
+            min-width: 300px;
+            width: 90%;
+            max-width: 600px;
+
+            .input-box{
+                background-color: rgba(155, 139, 248, 0.253);
+                border: none;
+                max-width: 95%;
+                min-width: 50%;
+                padding: 0.5em;
+                margin: 0.3em;
+                min-height: 2em;
+                box-shadow: -11px -8px 20px 0px rgba(120, 38, 253, 0.384);
+                border-radius: 0.1rem;
+            }
+            textarea{
+                width: 100%;
+                height: 15rem;
+            }
+
+        }
+        
+        button{
+                padding: 0.5em 1em;
+                background-color: rgba(109, 86, 241, 0.384);
+                color: rgb(50, 20, 219);
+                font-weight: bolder;
+                font-size: medium;
+                border: none;
+                box-shadow: 0px 2px 5px rgba(104, 73, 218, 0.596);
+                border-radius: 0.3rem;
+                               
+            }
+    }
+    .google-maps{
+        text-align: center;
+        height: 40vh;
+        width: 100%;
+        min-height: 300px;
+        max-width: 600px;
+        max-height: 450px;
+    }

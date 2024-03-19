@@ -1,0 +1,56 @@
+---
+import MainPageLayoutBn from "../../../layouts/MainPageLayout/MainPageLayoutBn.astro";
+import "../../../styles/contact-us.scss";
+
+const title = "আমাদের সাথে যোগাযোগ করুন - সুয়েনা";
+const description =
+    "যে কোন প্রয়োজনে সুয়েনার সাথে নির্দিধায় যোগাযোগ করুন। সুয়েনা আপনার প্রয়োজন বুঝতে পারে এবং বিশ্বাস করে যে আপনি আমাদের সাহায্য করতে ইচ্ছুক।";
+---
+
+<MainPageLayoutBn title={title} , description={description}>
+    <h1>{title}</h1>
+    <p>
+       {description}
+    </p>
+    <article class="contact-form">
+        <h2>আপনার প্রশ্নটি লিখুন</h2>
+        <form class="contact-us-form" action="https://formspree.io/f/xnqebqpq" method="POST">
+            <h3>যোগাযোগ ফর্ম</h3>
+            <label>
+                <span>আপনার নামঃ</span><br>
+                <input class="input-box" type="text" name="name" required/>
+            </label>
+            <label>
+                <span>আপনার ইমেইল এড্রেসঃ</span><br>
+                <input class="input-box" type="email" name="email" required/>
+            </label>
+            <label>
+                <span>
+                    বিস্তারিত লিখুনঃ
+                </span><br>
+                <textarea class="input-box" name="message" required></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button id="formSubmitted" type="submit" >সাবমিট করুন</button>
+        </form>
+    </article>    
+    <article>
+        <h2>যোগাযোগের তথ্য</h2>
+        <section class="email">
+            <h3>ইমেইল</h3>
+        <span>contact@suyena.com</span>
+        </section>
+        <section class="phone">
+            <h3>মোবাইল নং</h3>
+            <span>অপ্রযোজ্য</span>
+        </section>
+    </article>
+    <article>
+        <h2>
+            মানচিত্রে অনুসরণ করুন।
+        </h2>
+        <section class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14593.631112869354!2d90.3959949!3d23.8751547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c50068b86107%3A0x863df61f19b511b4!2sSuyena!5e0!3m2!1sen!2sbd!4v1710577775903!5m2!1sen!2sbd" width="95%" height="95%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </article>
+</MainPageLayoutBn>

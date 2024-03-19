@@ -1,0 +1,56 @@
+---
+import MainPageLayoutEn from "../../../layouts/MainPageLayout/MainPageLayoutEn.astro";
+import "../../../styles/contact-us.scss";
+
+const title = "Constact Us - Suyena";
+const description =
+    "Feel free to contact with Suyena on any purpose. Suyena understand your needs and believe that you are willful to help us.";
+---
+
+<MainPageLayoutEn title={title} , description={description}>
+    <h1>{title}</h1>
+    <p>
+       {description}
+    </p>
+    <article class="contact-form">
+        <h2>Submit your query</h2>
+        <form class="contact-us-form" action="https://formspree.io/f/xnqebqpq" method="POST">
+            <h3>Contact Form</h3>
+            <label>
+                <span>Your Name:</span><br>
+                <input class="input-box" type="text" name="name" required/>
+            </label>
+            <label>
+                <span>Your Email Address:</span><br>
+                <input class="input-box" type="email" name="email" required/>
+            </label>
+            <label>
+                <span>
+                    Your Message:
+                </span><br>
+                <textarea class="input-box" name="message" required></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button id="formSubmitted" type="submit" >Submit</button>
+        </form>
+    </article>    
+    <article>
+        <h2>Contact Information</h2>
+        <section class="email">
+            <h3>Email</h3>
+        <span>contact@suyena.com</span>
+        </section>
+        <section class="phone">
+            <h3>Phone</h3>
+            <span>Not Available</span>
+        </section>
+    </article>
+    <article>
+        <h2>
+            Follow on map.
+        </h2>
+        <section class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14593.631112869354!2d90.3959949!3d23.8751547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c50068b86107%3A0x863df61f19b511b4!2sSuyena!5e0!3m2!1sen!2sbd!4v1710577775903!5m2!1sen!2sbd" width="95%" height="95%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </article>
+</MainPageLayoutEn>
