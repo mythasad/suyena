@@ -1,0 +1,77 @@
+---
+import { db, Comment } from "astro:db";
+
+
+if(Astro.request.method=== 'POST'){
+    const formData = await Astro.request.formData();
+    const author =  formData.get('author');
+    const content = formData.get('content');
+    if(typeof author ===  'string'  && typeof content === 'string'){
+        await  db.insert(Comment).values({author, content});
+    }
+}
+
+const comments = await db.select().from(Comment);
+---
+<title>
+    Hi, This is me. 
+</title>
+<h2>Comments</h2>
+<a href="#">Home</a>
+
+<form method="post">
+<label for="author">Author</label>
+<input id="author" name="author">
+<label for="content">Content</label>
+<textarea name="content" id="content"></textarea>
+<button type="submit">Submit</button>
+</form>
+
+
+
+{
+    comments.map(({ author, content }) => (
+        <article>
+            <p class="author">Author: {author}</p>
+            <p class="body">{content}</p>
+        </article>
+    ))
+}
+
+
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 50%;
+        justify-content: center;
+        input, textarea{
+            width: 400px;
+        }
+        input{
+            height: 30px;
+        }
+        textarea{
+            height: 200px;
+        }
+        button{
+            width: min-content;
+            padding: 4px;
+            margin: 2px;
+
+        }
+    }
+    article{
+    }
+   .author{  
+   }
+   .body{
+    padding: 20px;
+    margin-left: 30px;
+    background-color: gainsboro;
+
+   }
+</style>
